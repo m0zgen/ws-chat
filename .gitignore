@@ -1,0 +1,20 @@
+# Ignore everything
+# IDE
+.idea
+.DS_Store
+.vscode
+
+# Profiling
+*.prof
+profiles
+
+# Build
+dist
+tools/builds/prev
+tools
+
+# Binaries and generated files
+ws-chate
+
+# Stay in repo
+!internal/*
