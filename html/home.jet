@@ -29,7 +29,7 @@
             <p>Messages</p>
 
             <div class="form-group">
-                <p><a href="https://github.com">Go to github</a></p>
+                <p><a href="https://github.com/m0zgen/ws-chat" target="_blank">Go to github</a></p>
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" autocomplete="off">
             </div>
