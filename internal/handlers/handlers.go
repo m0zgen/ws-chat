@@ -56,7 +56,7 @@ func WsEndpoint(w http.ResponseWriter, r *http.Request) {
 	response.Message = `<em><small>Welcome to server</small></em>`
 
 	conn := WebSocketConnection{Conn: ws}
-	clients[conn] = "some value"
+	clients[conn] = ""
 
 	err = ws.WriteJSON(response)
 	if err != nil {
