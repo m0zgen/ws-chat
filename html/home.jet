@@ -45,6 +45,10 @@
 
             <input type="hidden" name="action" id="action">
 
+            <div id="status" class="mt-4 float-end">
+
+            </div>
+
             <hr>
 
             <div id="output" class="chatbox">
@@ -88,12 +92,19 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         socket = new ReconnectingWebSocket("ws://localhost:8080/ws", null, {reconnectInterval: 3000});
+
+        const offline = `<span class="badge bg-danger">Offline</span>`
+        const online = `<span class="badge bg-success">Online</span>`
+        let statusDiv = document.getElementById("status");
+
         socket.onopen = () => {
             console.log("WebSocket is open now.");
+            statusDiv.innerHTML = online;
             socket.send("Hello Server!");
         };
 
         socket.onclose = () => {
+            statusDiv.innerHTML = offline;
             console.log("WebSocket is closed now.");
         };
 
