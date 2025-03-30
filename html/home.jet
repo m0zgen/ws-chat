@@ -99,13 +99,13 @@
 
         socket.onopen = () => {
             console.log("WebSocket is open now.");
-            statusDiv.innerHTML = online;
             socket.send("Hello Server!");
+            statusDiv.innerHTML = online;
         };
 
         socket.onclose = () => {
-            statusDiv.innerHTML = offline;
             console.log("WebSocket is closed now.");
+            statusDiv.innerHTML = offline;
         };
 
         socket.onerror = error => {
